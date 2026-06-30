@@ -5,17 +5,25 @@ const app = express();
 const PORT = 3000;
 
 app.get("/", (req, res) => {
-    res.send("Bienvenido.");
+    res.json({
+        mensaje: "Bienvenido al sistema"
+    });
 });
 
 app.get("/aprendices", (req, res) => {
-    res.send("Aprendices SENA.");
+    res.json({
+        mensaje: "Gestión de aprendices"
+    });
 });
 
 app.get("/programas", (req, res) => {
-    res.send("Gestión de programas.");
+    res.json({
+        mensaje: "Gestión de programas de formación"
+    });
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
+const PORT = 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Servidor ejecutándose en http://10.5.225.45:${PORT}`);
 });
